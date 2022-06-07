@@ -14,13 +14,13 @@ class EditContra extends Controller
     public function editarcontra(Request $request)
     {
         $data = $request->input();
-        $contra = $data['hola'];
+        $contra = $data['contra'];
 
         if(!empty($contra)){
             
             
             $id=$request->user()->id;
-            DB::table('users')->where(['id' => $id])->update(['password' => Hash::make($data['hola'])]);
+            DB::table('users')->where(['id' => $id])->update(['password' => Hash::make($data['contra'])]);
             return redirect('tickpass');
     
         }else{

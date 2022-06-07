@@ -76,7 +76,7 @@
         .btn-group button:hover {
         background-color: #3e8e41;
         }
-        .pepe{
+        .theme{
             margin-top: 20px;
         }
         .mains{
@@ -243,36 +243,36 @@ function showPage() {
 
 
     
-   if (localStorage.hey === 'Awa') {
+   if (localStorage.a === '1') {
                 localStorage.setItem("lastname", "linear-gradient(50deg, #5E5E5E 50%, #7F7F7F 50%)");
                 document.body.style.background=localStorage.getItem("lastname");
 
                 }
-                if (localStorage.hey === 'no') {
+                if (localStorage.a === '2') {
                 localStorage.setItem("lastname", "linear-gradient((50deg, #FF8112 50%, #00B3D6 50%)");
                 document.body.style.background=localStorage.getItem("lastname");
                 }
-                if (localStorage.hey === 'puede') {
+                if (localStorage.a === '3') {
                 localStorage.setItem("lastname", "linear-gradient(50deg, #8c004b 50%, #ff0000 50%)");
                 document.body.style.background=localStorage.getItem("lastname");
                 }
 
                 function cambiarcoloroscuro(){
 
-                localStorage.setItem('hey', 'Awa');
+                localStorage.setItem('a', '1');
                 location.reload();
 
                 }
                 function cambiarcolornormal(){
 
-                localStorage.setItem('hey', 'no');
+                localStorage.setItem('a', '2');
                 location.reload();
 
 
                 }
                 function cambiarcolorabstracto(){
 
-                localStorage.setItem('hey', 'puede');
+                localStorage.setItem('a', '3');
                 location.reload();
 
 

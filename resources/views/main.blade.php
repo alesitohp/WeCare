@@ -311,7 +311,7 @@ nav a:hover:before{
     </div> -->
 </nav>
 <script>
-  if (localStorage.bianco === 'tomillo') {
+  if (localStorage.lang === 'eng') {
 /*     localStorage.setItem("idioma", "Language");         
     document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
 
@@ -325,7 +325,7 @@ nav a:hover:before{
         
     document.getElementById("cerrar").innerHTML = "Sign out";
     }
-    if (localStorage.bianco === 'JUAN') {
+    if (localStorage.lang === 'ale') {
 /*     localStorage.setItem("idioma", "Language");         
     document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
 

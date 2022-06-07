@@ -33,26 +33,26 @@
                         <button id="cambiarale" onclick="aleman()">Ale</button>
                     </div>
 
-                    <p class="pepe" id="tema">Tema</p>
+                    <p class="theme" id="tema">Tema</p>
                     <div class="btn-group">
                         <button id="oscuro" onclick="cambiarcoloroscuro()">Oscuro</button>
                         <button id="normal" onclick="cambiarcolornormal()">Predeterminado</button>
                         <button id="abstracto" onclick="cambiarcolorabstracto()">Abstracto</button>
                     </div> 
-                    <p class="pepe" id="correoc">Cambiar correo electrónico</p>  
+                    <p class="theme" id="correoc">Cambiar correo electrónico</p>  
                     
 
                     <form action="{{route('correo')}}" method="POST">
                     @csrf
-                    <input type="text" name="adios" id="adios"> 
+                    <input type="text" name="correo" id="correo"> 
                     <button>Enviar</button>
 
-                    <img src="{{asset('assets/images/tick.png')}}"  id="pua" width="50" height="50" alt=""><p class="verde">Correcto</p>
+                    <img src="{{asset('assets/images/tick.png')}}"  id="tickcross" width="50" height="50" alt=""><p class="verde">Correcto</p>
                     </form>
                     <form action="{{route('contra')}}" method="POST">
                     @csrf
-                    <p class="pepe" id="contra">Cambiar contraseña</p> 
-                    <input type="text"  name="hola" id="hola"> 
+                    <p class="theme" id="contra">Cambiar contraseña</p> 
+                    <input type="text"  name="contra" id="contra"> 
                     <button id="enviarc">Enviar</button>
                     </form>
                     
@@ -65,7 +65,7 @@
 </main>
 
 <script>
-    if (localStorage.bianco === 'cubata') {
+    if (localStorage.lang === 'esp') {
     
     document.getElementById("cambiaridioma").innerHTML = "Idioma";
     document.getElementById("ajustes").innerHTML = "Ajustes";
@@ -77,7 +77,7 @@
 
     }
         
-if (localStorage.bianco === 'tomillo') {         
+if (localStorage.lang === 'eng') {         
     document.getElementById("cambiaridioma").innerHTML ="Language"; 
     document.getElementById("ajustes").innerHTML = "Settings";
     document.getElementById("tema").innerHTML = "Theme";
@@ -89,7 +89,7 @@ if (localStorage.bianco === 'tomillo') {
 
     }
 
-    if (localStorage.bianco === 'JUAN') {
+    if (localStorage.lang === 'ale') {
     
     
     document.getElementById("cambiaridioma").innerHTML = "Idiom";
@@ -104,20 +104,20 @@ if (localStorage.bianco === 'tomillo') {
     } 
     function español(){
 
-localStorage.setItem('bianco', 'cubata');
+localStorage.setItem('lang', 'esp');
 location.reload();
 }
     
 function ingles(){
 
-localStorage.setItem('bianco', 'tomillo');
+localStorage.setItem('lang', 'eng');
 location.reload();
 
 
 }
 function aleman(){
 
-localStorage.setItem('bianco', 'JUAN');
+localStorage.setItem('lang', 'ale');
 location.reload();
 
 
