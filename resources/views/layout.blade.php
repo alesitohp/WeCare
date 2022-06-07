@@ -143,23 +143,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <!-- @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}">Salir</a>
-                    </li>
-                @endguest -->
-            </ul>
-  
-        </div>
     </div>
 </nav>
 <div style="display:none;" id="myDivmain" class="animate-bottom">
@@ -172,21 +155,25 @@
                   <div class="d-flex justify-content align-items-center">
 
                     
-                <div style="margin-right: 90px;margin-left: 180px;">
-                <p style="margin-left: 20px;">Baños de chicos</p>
-                <svg width="200px" height="300px">
-                <circle cx="75" cy="45" r="30"
-                        fill="red" stroke="black" stroke-width="2" class="blink" />
-                <circle cx="75" cy="145" r="30"
-                        fill="yellow" stroke="black" stroke-width="2" />
-                <circle cx="75" cy="245" r="30"
-                        fill="#40CC40" stroke="black" stroke-width="2" />
+                <div style="margin-right: 35px;margin-left: 105px;">
+                <p style="margin-left: 20px;">Baños de chicos 1</p>
+                <svg width="200px" height="00px">
+                <p></p>
+                <img src="{{asset('assets/images/rojo1.png')}}"class="blink" width="160" height="160" alt="">
+                <p></p>
+                <p></p>
+                <img src="{{asset('assets/images/naranja1.png')}}"class="" width="160" height="160" alt="">
+                <p></p>
+                <p></p>
+                <img src="{{asset('assets/images/verde1.png')}}"class="" width="160" height="160" alt="">
+                <p></p>
+                
                 </svg>
                 <div style="margin-left: 15px;margin-top: 15px;">
                 <form action="">
                 @csrf
-                <button  style="display: inline-block;" id="añadir" name="añadir">Añadir</button>
-                <button style="display: inline-block" id="añadir" name="añadir">Borrar</button>
+                <button  style="display: inline-block;" id="entrada" name="entrada">ENTRADA</button>
+                <button style="display: inline-block" id="salida" name="salida">SALIDA</button>
                 </form>
                 
                 
@@ -196,23 +183,90 @@
 
                 </div>
 
-                <div style="margin-right: 180px;margin-left: 90px; ">
-                <p style="margin-left: 20px;">Baños de chicas</p>
-                <svg width="200px" height="300px">
-                <circle cx="75" cy="45" r="30"
-                        fill="red" stroke="black" stroke-width="2"  />
-                <circle cx="75" cy="145" r="30"
-                        fill="yellow" stroke="black" stroke-width="2" />
-                <circle cx="75" cy="245" r="30"
-                        fill="#40CC40" stroke="black" stroke-width="2"class="blink" />
+                <div style="margin-right: 35px;margin-left: 35px;">
+                <p style="margin-left: 20px;">Baños de chicos 2</p>
+                <svg width="200px" height="00px">
+                <p></p>
+                <img src="{{asset('assets/images/rojo1.png')}}"class="blink" width="160" height="160" alt="">
+                <p></p>
+                <p></p>
+                <img src="{{asset('assets/images/naranja1.png')}}"class="" width="160" height="160" alt="">
+                <p></p>
+                <p></p>
+                <img src="{{asset('assets/images/verde1.png')}}"class="" width="160" height="160" alt="">
+                <p></p>
+                
                 </svg>
                 <div style="margin-left: 15px;margin-top: 15px;">
-                <button style="display: inline-block;"  id="añadir" name="añadir">Añadir</button>
-                <button style="display: inline-block" id="borrar" name="borrar">Borrar</button>
+                <form action="">
+                @csrf
+                <button  style="display: inline-block;" id="entrada" name="entrada">ENTRADA</button>
+                <button style="display: inline-block" id="salida" name="salida">SALIDA</button>
+                </form>
+                
+                
 
                 </div>
 
+
                 </div>
+
+                <div style="margin-right: 35px;margin-left: 35px;">
+                <p style="margin-left: 20px;">Baños de chicas 1</p>
+                <svg width="200px" height="00px">
+                <p></p>
+                <img src="{{asset('assets/images/rojo1.png')}}"class="blink" width="160" height="160" alt="">
+                <p></p>
+                <p></p>
+                <img src="{{asset('assets/images/naranja1.png')}}"class="" width="160" height="160" alt="">
+                <p></p>
+                <p></p>
+                <img src="{{asset('assets/images/verde1.png')}}"class="" width="160" height="160" alt="">
+                <p></p>
+                
+                </svg>
+                <div style="margin-left: 15px;margin-top: 15px;">
+                <form action="">
+                @csrf
+                <button  style="display: inline-block;" id="entrada" name="entrada">ENTRADA</button>
+                <button style="display: inline-block" id="salida" name="salida">SALIDA</button>
+                </form>
+                
+                
+
+                </div>
+
+
+                </div>
+
+                <div style="margin-right: 35px;margin-left: 35px;">
+                <p style="margin-left: 20px;">Baños de chicas 2</p>
+                <svg width="200px" height="00px">
+                <p></p>
+                <img src="{{asset('assets/images/rojo1.png')}}"class="blink" width="160" height="160" alt="">
+                <p></p>
+                <p></p>
+                <img src="{{asset('assets/images/naranja1.png')}}"class="" width="160" height="160" alt="">
+                <p></p>
+                <p></p>
+                <img src="{{asset('assets/images/verde1.png')}}"class="" width="160" height="160" alt="">
+                <p></p>
+                
+                </svg>
+                <div style="margin-left: 15px;margin-top: 15px;">
+                <form action="">
+                @csrf
+                <button  style="display: inline-block;" id="entrada" name="entrada">ENTRADA</button>
+                <button style="display: inline-block" id="salida" name="salida">SALIDA</button>
+                </form>
+                
+                
+
+                </div>
+
+
+                </div>
+
                 
 
                   </div>
