@@ -15,10 +15,12 @@
             display: none;
         }
 </style>
+
 <main class="login-form">
   <div class="cotainer">
       <div class="row justify-content-center">
           <div class="col-md-8">
+          <div style="display:none;" id="myDivlogin" class="animate-bottom">
               <div class="card">
                   <div class="card-header">Registrar Usuarios nuevos</div>
                   <div class="card-body">
@@ -54,6 +56,11 @@
                                   @endif
                               </div>
                           </div>
+                          <div class="col-md-6 offset-md-4">
+                              <button type="submit" class="btn btn-primary">
+                                  Registrarse
+                              </button>
+                          </div>
   
                           <!-- <div class="form-group row">
                               <div class="col-md-6 offset-md-4">
@@ -65,16 +72,13 @@
                               </div>
                           </div>
   
-                          <div class="col-md-6 offset-md-4">
-                              <button type="submit" class="btn btn-primary">
-                                  Registrarse
-                              </button>
-                          </div>
+                          
                       </form>
                       
                         
                   </div>
               </div>
+          </div>
           </div>
       </div>
   </div>

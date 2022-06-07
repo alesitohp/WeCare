@@ -12,7 +12,7 @@ class EditCorreo extends Controller
     public function editarcorreo(Request $request)
     {
         $data = $request->input();
-        $emails = $data['enviar'];
+        $emails = $data['adios'];
 
         if(!empty($emails)){
             

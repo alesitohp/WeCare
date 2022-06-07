@@ -33,21 +33,21 @@
                         <button id="cambiarale" onclick="aleman()">Ale</button>
                     </div>
 
-                    <p class="theme" id="tema">Tema</p>
+                    <p class="pepe" id="tema">Tema</p>
                     <div class="btn-group">
                         <button id="oscuro" onclick="cambiarcoloroscuro()">Oscuro</button>
                         <button id="normal" onclick="cambiarcolornormal()">Predeterminado</button>
                         <button id="abstracto" onclick="cambiarcolorabstracto()">Abstracto</button>
                     </div> 
-                    <p class="theme" id="correoc">Cambiar correo electrónico</p>  
+                    <p class="pepe" id="correoc">Cambiar correo electrónico</p>  
                     
 
                     <form action="{{route('correo')}}" method="POST">
                     @csrf
-                    <input type="text" name="enviar" id="enviar"> 
+                    <input type="text" name="adios" id="adios"> 
                     <button>Enviar</button>
 
-                    <img src="{{asset('assets/images/cross.png')}}"  id="imagenn" width="50" height="50" alt=""><p class="rojo">Error</p>
+                    <img src="{{asset('assets/images/cross.png')}}"  id="pua" width="50" height="50" alt=""><p class="rojo">Error</p>
                     </form>
                     
                     
@@ -59,7 +59,7 @@
 </main>
 
 <script>
-    if (localStorage.a === '1') {
+    if (localStorage.bianco === 'cubata') {
     
     document.getElementById("cambiaridioma").innerHTML = "Idioma";
     document.getElementById("ajustes").innerHTML = "Ajustes";
@@ -71,7 +71,7 @@
 
     }
         
-if (localStorage.a === '2') {         
+if (localStorage.bianco === 'tomillo') {         
     document.getElementById("cambiaridioma").innerHTML ="Language"; 
     document.getElementById("ajustes").innerHTML = "Settings";
     document.getElementById("tema").innerHTML = "Theme";
@@ -83,7 +83,7 @@ if (localStorage.a === '2') {
 
     }
 
-    if (localStorage.a === '3') {
+    if (localStorage.bianco === 'JUAN') {
     
     
     document.getElementById("cambiaridioma").innerHTML = "Idiom";
@@ -98,20 +98,20 @@ if (localStorage.a === '2') {
     } 
     function español(){
 
-localStorage.setItem('a', '1');
+localStorage.setItem('bianco', 'cubata');
 location.reload();
 }
     
 function ingles(){
 
-localStorage.setItem('a', '2');
+localStorage.setItem('bianco', 'tomillo');
 location.reload();
 
 
 }
 function aleman(){
 
-localStorage.setItem('a', '3');
+localStorage.setItem('bianco', 'JUAN');
 location.reload();
 
 

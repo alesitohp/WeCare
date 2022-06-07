@@ -14,7 +14,7 @@
             display: none;
         }
 </style>
-
+<div style="display:none;" id="myDivlogin" class="animate-bottom">
 <main class="login-form">
   <div class="cotainer">
       <div class="row justify-content-center">
@@ -26,7 +26,7 @@
                       <form action="{{ route('login.post') }}" method="POST">
                           @csrf
                           <div class="form-group row">
-                              <label id="correo" for="email_address" class="col-md-4 col-form-label text-md-right">Correo electrónico</label>
+                              <label for="email_address" class="col-md-4 col-form-label text-md-right">Correo electrónico</label>
                               <div class="col-md-6">
                                   <input type="text" id="email_address" class="form-control" name="email" required autofocus>
                                   @if ($errors->has('email'))
@@ -36,12 +36,12 @@
                           </div>
   
                           <div class="form-group row">
-                              <label for="password" id="contraseña" class="col-md-4 col-form-label text-md-right">Contraseña</label>
+                              <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña</label>
                               <div class="col-md-6">
                                   <input type="password" id="password" class="form-control" name="password" required>
                                   <br>
                                   <label class="container">
-                                  <p id="mostrar"><input  type="checkbox" onclick="myFunction()"> Mostrar contraseña   </p> 
+                                  <input type="checkbox" onclick="myFunction()"> Mostrar contraseña
                                   </label>
                                   @if ($errors->has('password'))
                                       <span class="text-danger">{{ $errors->first('password') }}</span>
@@ -63,15 +63,15 @@
                           <div class="form-group row">
                               <div class="col-md-6 offset-md-4">
                                   <div class="checkbox">
-                                      <!-- <label class="container">
+                                      <label class="container">
                                           <input type="checkbox" name="remember"> Recuérdame
-                                      </label> -->
+                                      </label>
                                   </div>
                               </div>
                           </div>
   
                           <div class="col-md-6 offset-md-4">
-                              <button id="iniciar" type="submit" class="btn btn-primary">
+                              <button type="submit" class="btn btn-primary">
                                   Iniciar Sesión
                               </button>
                           </div>
@@ -84,40 +84,7 @@
       </div>
   </div>
 </main>
-<script>
-  if (localStorage.a === '2') {
-/*     localStorage.setItem("idioma", "Language");         
-    document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
-
-    document.getElementById("correo").innerHTML = "Homepage";
-
-            
-    document.getElementById("contraseña").innerHTML = "Settings";
-    
-      
-    document.getElementById("mostrar").innerHTML = "Invite";
-
-    document.getElementById("iniciar").innerHTML = "Invite";
-
-        
-    }
-    if (localStorage.a === '3') {
-/*     localStorage.setItem("idioma", "Language");         
-    document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
-
-    document.getElementById("correo").innerHTML = "Startseite";
-
-            
-    document.getElementById("contraseña").innerHTML = "Einstellung";
-    
-      
-/*     document.getElementById("mostrar").innerHTML = "Einladen";
- */
-    document.getElementById("iniciar").innerHTML = "Einladen";
-
-        
-    }
-</script>
+</div>
 
 @endsection
 

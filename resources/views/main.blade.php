@@ -34,7 +34,6 @@ nav{
   position: fixed;
   top:50px;
   text-align:center;
-  
 }
 nav a{
   font-family: 'Oswald', sans-serif;
@@ -103,17 +102,58 @@ nav a:hover:before{
 <body>
     
 <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
-  
+    
 <nav>
   <a id="inicio" href="{{ route('dashboard') }}">Inicio</a>
   <a id="ajustes" href="{{ route('settings') }}">Ajustes</a>
-  <a id="aba" href="{{ route('logout') }}">Cerrar sesión</a>
+  <a id="cerrar" href="{{ route('logout') }}">Cerrar sesión</a>
 </nav>
 
+  <!-- <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img class="logo horizontal-logo" src="horizontal-logo.svg" alt="forecastr logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="{{ route('register') }}">Registrar usuarios</a>        
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="{{ route('login') }}">Ajustes</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        ...
+      </ul>
+    </div>
+  </div> -->
 </navbar>
    
-
-    
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}">Salir</a>
+                    </li>
+                @endguest
+            </ul>
+  
+        </div>
+    </div> -->
 </nav>
 
   
@@ -174,11 +214,6 @@ nav a:hover:before{
   animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 
 }
-
-.mains{
-            margin-top: 100px;
-            display: block;
-        }
 @keyframes in{
   0%{
     width: 0;
@@ -215,7 +250,6 @@ nav a:hover:before{
 }
 
 
-
         
     </style>
 </head>
@@ -230,28 +264,56 @@ nav a:hover:before{
   <a id="cerrar" href="{{ route('logout') }}">Cerrar sesión</a>
 </nav>
 
-  
+  <!-- <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img class="logo horizontal-logo" src="horizontal-logo.svg" alt="forecastr logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="{{ route('register') }}">Registrar usuarios</a>        
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="{{ route('login') }}">Ajustes</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        ...
+      </ul>
+    </div>
+  </div> -->
 </navbar>
    
-        
-</nav>
-
-
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}">Salir</a>
+                    </li>
+                @endguest
+            </ul>
   
-@yield('content')
-     
-</body>
-</html>
-
-
-@else
-
-@endif
-</body>
-
-</html>
+        </div>
+    </div> -->
+</nav>
 <script>
-  if (localStorage.a === '2') {
+  if (localStorage.bianco === 'tomillo') {
+/*     localStorage.setItem("idioma", "Language");         
+    document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
 
     document.getElementById("inicio").innerHTML = "Homepage";
 
@@ -263,7 +325,9 @@ nav a:hover:before{
         
     document.getElementById("cerrar").innerHTML = "Sign out";
     }
-    if (localStorage.a === '3') {
+    if (localStorage.bianco === 'JUAN') {
+/*     localStorage.setItem("idioma", "Language");         
+    document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
 
     document.getElementById("inicio").innerHTML = "Startseite";
 
@@ -276,3 +340,13 @@ nav a:hover:before{
     document.getElementById("cerrar").innerHTML = "Ausloggen";
     }
 </script>
+
+  
+@yield('content')
+     
+</body>
+</html>
+@endif
+
+</body>
+</html>

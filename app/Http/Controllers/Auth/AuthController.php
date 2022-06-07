@@ -28,11 +28,6 @@ class AuthController extends Controller
      *
      * @return response()
      */
-    /* public function registration()
-    {
-        
-
-    } */
     public function registration()
     {
         if(Auth::check()){
@@ -44,6 +39,14 @@ class AuthController extends Controller
             }
             
             }
+  
+        return redirect("login")->withSuccess('Opps! You do not have access');
+    }
+    public function settings()
+    {
+        if(Auth::check()){
+            return view('settings');
+        }
   
         return redirect("login")->withSuccess('Opps! You do not have access');
     }
@@ -89,12 +92,13 @@ class AuthController extends Controller
        
         $mailable = new Correo;
         Mail::to("aarroyo@ptvtelecom.com")->send($mailable);
-        return "Enviado";        
-
         
         
         
-        return redirect("dashboard")->withSuccess('Great! You have Successfully loggedin');
+        
+        
+        
+        return redirect("login")->withSuccess('Great! You have Successfully loggedin');
     }
     
     /**
@@ -110,17 +114,6 @@ class AuthController extends Controller
   
         return redirect("login")->withSuccess('Opps! You do not have access');
     }
-
-    public function settings()
-    {
-        if(Auth::check()){
-            return view('settings');
-        }
-  
-        return redirect("login")->withSuccess('Opps! You do not have access');
-    }
-
-    
     
     /**
      * Write code on Method
@@ -149,6 +142,7 @@ class AuthController extends Controller
         return Redirect('login');
     }
     
+    
 }
 ?>
 <script>
@@ -164,4 +158,3 @@ function delayRedirect(){
     },1000);
 }
 </script>
-
