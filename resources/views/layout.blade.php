@@ -16,6 +16,7 @@
       text-align: left;
       height: 100%;
       background: linear-gradient(50deg, #FF8112 50%, #00B3D6 50%);
+      background-repeat: no-repeat;
     }
 
     .navbar-brand,
@@ -56,7 +57,11 @@
       top: 0em;
     }
 
+    .busqueda {
+      float: right;
+      width: 50em;
 
+    }
 
     .btn-group button {
       background-color: #04AA6D;
@@ -95,8 +100,10 @@
     }
 
     .mains {
-      margin-top: 100px;
+      margin-top: 2em;
+      margin-left: -25em;
       display: block;
+      text-align: center;
     }
 
     .blink {
@@ -181,7 +188,7 @@
   </nav>
   <div style="display:none;" id="myDivmain" class="animate-bottom">
     <main class="login-form mains">
-      <div class="cotainer">
+      <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8">
             <div class="card">
@@ -190,7 +197,7 @@
 
 
                   <div style="margin-right: 2em;margin-left: 2em;">
-                    <p>BAÑOS DE CHICOS 1</p>
+                    <p>CHICOS 1</p>
                     <svg width="1em" height="0em">
                       <p></p>
                       <img src="{{asset('assets/images/rojo1.png')}}" class="blink" width="100em" height="100em" alt="">
@@ -203,22 +210,11 @@
                       <p></p>
 
                     </svg>
-                    <div>
-                      <form action="">
-                        @csrf
-                        <button style="display: inline-block;" id="entrada" name="entrada">ENTRADA</button>
-                        <button style="display: inline-block" id="salida" name="salida">SALIDA</button>
-                      </form>
-
-
-
-                    </div>
-
 
                   </div>
 
                   <div style="margin-right: 2em;margin-left: 2em;">
-                    <p>BAÑOS DE CHICOS 2</p>
+                    <p>CHICOS 2</p>
                     <svg width="1em" height="0em">
                       <p></p>
                       <img src="{{asset('assets/images/rojo1.png')}}" class="blink" width="100em" height="100em" alt="">
@@ -231,22 +227,11 @@
                       <p></p>
 
                     </svg>
-                    <div>
-                      <form action="">
-                        @csrf
-                        <button style="display: inline-block;" id="entrada" name="entrada">ENTRADA</button>
-                        <button style="display: inline-block" id="salida" name="salida">SALIDA</button>
-                      </form>
-
-
-
-                    </div>
-
 
                   </div>
 
                   <div style="margin-right: 2em;margin-left: 2em;">
-                    <p>BAÑOS DE CHICAS 1</p>
+                    <p>CHICAS 1</p>
                     <svg width="1em" height="0em">
                       <p></p>
                       <img src="{{asset('assets/images/rojo1.png')}}" class="blink" width="100em" height="100em" alt="">
@@ -259,22 +244,11 @@
                       <p></p>
 
                     </svg>
-                    <div>
-                      <form action="">
-                        @csrf
-                        <button style="display: inline-block;" id="entrada" name="entrada">ENTRADA</button>
-                        <button style="display: inline-block" id="salida" name="salida">SALIDA</button>
-                      </form>
-
-
-
-                    </div>
-
 
                   </div>
 
                   <div style="margin-right: 2em;margin-left: 2em;">
-                    <p>BAÑOS DE CHICAS 2</p>
+                    <p>CHICAS 2</p>
                     <svg width="1em" height="0em">
                       <p></p>
                       <img src="{{asset('assets/images/rojo1.png')}}" class="blink" width="100em" height="100em" alt="">
@@ -287,33 +261,35 @@
                       <p></p>
 
                     </svg>
-                    <div>
-                      <form action="">
-                        @csrf
-                        <button style="display: inline-block;" id="entrada" name="entrada">ENTRADA</button>
-                        <button style="display: inline-block" id="salida" name="salida">SALIDA</button>
-                      </form>
-
-
-
-                    </div>
-
 
                   </div>
-
-
-
-
 
                 </div>
+
+
+
+
+
               </div>
             </div>
           </div>
         </div>
+      </div>
     </main>
   </div>
+  <div class="busqueda">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content align-items-center">
 
-  @yield('content')
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @yield('content')
 
 </body>
 
