@@ -8,17 +8,17 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
                 @include('flash-message')
                 @yield('content')
-  
+
                 <div class="card-body">
                     @if (session('success'))
-                        <div class="alert alert-success" role="admin">
-                            {{ session('success') }}
-                            
-                        </div>
-                        
+                    <div class="alert alert-success" role="admin">
+                        {{ session('success') }}
+
+                    </div>
+
                     @endif
-  You are Logged In
-                    
+                    You are Logged In
+
                 </div>
             </div>
         </div>
