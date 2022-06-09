@@ -14,7 +14,7 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <style type="text/css">
-        @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+        @import url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
   
         body{
             margin: 0;
@@ -26,7 +26,7 @@
             height: 100%;
             background: linear-gradient(50deg, #FF8112 50%, #00B3D6 50%);
         }
-        @import url('https://fonts.googleapis.com/css?family=Oswald:500');
+        @import url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
 
 
 nav{
@@ -36,7 +36,7 @@ nav{
   text-align:center;
 }
 nav a{
-  font-family: 'Oswald', sans-serif;
+  font-family: Poppins;
   font-weight:500;
   text-transform:uppercase;
   text-decoration:none;
@@ -168,7 +168,7 @@ nav a:hover:before{
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <style type="text/css">
-        @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+        @import url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
   
         body{
             margin: 0;
@@ -180,7 +180,7 @@ nav a:hover:before{
             height: 100%;
             background: linear-gradient(50deg, #FF8112 50%, #00B3D6 50%);
         }
-        @import url('https://fonts.googleapis.com/css?family=Oswald:500');
+        @import url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
 
 
 nav{
@@ -190,7 +190,7 @@ nav{
   text-align:center;
 }
 nav a{
-  font-family: 'Oswald', sans-serif;
+  font-family: Poppins;
   font-weight:500;
   text-transform:uppercase;
   text-decoration:none;
