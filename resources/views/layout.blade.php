@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+ 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <style type="text/css">
     @import url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
 
@@ -59,8 +65,8 @@
 
     .busqueda {
       float: right;
-      width: 50em;
-
+      width: 47em;
+      margin-top: -32.5em;
     }
 
     .btn-group button {
@@ -140,6 +146,11 @@
         bottom: 0;
         opacity: 1
       }
+    }
+
+    .row {
+      margin-left:auto;
+      margin-right:auto;
     }
 
     #myDivmain {
@@ -283,6 +294,10 @@
         <div class="card">
           <div class="card-body">
             <div class="d-flex justify-content align-items-center">
+              <div class="row">
+                <h2>Alumnos</h2>
+                <input name="search" id="search" placeholder="Buscar un alumno..." class="form-control ui-autocomplete-input" autocomplete="off">
+              </div>
 
             </div>
           </div>
@@ -347,5 +362,9 @@
 
   }
 
-  // Store
+  $(function() {
+     $( "#term" ).autocomplete({
+       source: 'ajax-db-search.php',
+     });
+  });
 </script>
