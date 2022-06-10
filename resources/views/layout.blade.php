@@ -187,9 +187,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
     <div class="container">
-      <a href="{{ route('dashboard') }}">
-        <img src="{{asset('assets/images/lapua.png')}}" class="imagen" width="160" height="160" alt="">
-      </a>
+      
       </img>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -198,6 +196,9 @@
     </div>
   </nav>
   <div style="display:none;" id="myDivmain" class="animate-bottom">
+  <a href="{{ route('dashboard') }}">
+        <img src="{{asset('assets/images/lapua.png')}}" class="imagen" width="160" height="160" alt="">
+      </a>
     <main class="login-form mains">
       <div class="container">
         <div class="row justify-content-center">
@@ -295,20 +296,63 @@
           <div class="card-body">
             <div class="d-flex justify-content align-items-center">
               <div class="row">
-                <h2>Alumnos</h2>
-                <input name="search" id="search" placeholder="Buscar un alumno..." class="form-control ui-autocomplete-input" autocomplete="off">
-              </div>
-
+              <h1>Buscar alumno</h1>
+              <section style="padding-top:20px">
+    <div class="container">
+         <div class="row">
+              <div class="col-md-6offset-md-3">
+                   <div class="card">
+                        <div class="card-header">
+                            
+                        </div>
+                        <div class="car-body" style="padding-top: 30px;padding-bottom:40px;padding-left:20px;padding-right:20px;">
+                                                                     
+                             <form>
+                                  <div class="form-group">
+                                       <input type="text"class="form-control typeahead"placeholder="Search ..."/>
+                                  </div>
+                             </form>
+                             </div>
+                            </div>
+                        </div>
+                   </div> 
             </div>
+</section>              
+              </div>
+              
+              </div>
+            </div>
+            
           </div>
+          
         </div>
+        
       </div>
+      
     </div>
+    
     @yield('content')
 
 </body>
 
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" integrity="sha512-HWlJyU4ut5HkEj0QsK/IxBCY55n5ZpskyjVlAoV9Z7XQwwkqXoYdCIC93/htL3Gu5H3R4an/S0h2NXfbZk3g7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+ var path="{{route('autocomplete')}}";
+  $('input.typeahead').typeahead({
+      source:function(terms,process){
+        return $.get(path,{terms:terms},function(data){
+               return process(data);
+          }); 
+
+        }
+  });                
+          
+</script> 
+
 <script>
   var myVar;
 
@@ -362,9 +406,5 @@
 
   }
 
-  $(function() {
-     $( "#term" ).autocomplete({
-       source: 'ajax-db-search.php',
-     });
-  });
+  
 </script>

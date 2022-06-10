@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
   
 use App\Http\Controllers\Auth\AuthController;
+use Illuminate\Support\Facades\Input;
+use App\User;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ProductController;
+
   
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +37,7 @@ Route::view('/tickpass', 'tickpass')->name('tickpass');
 Route::view('/crosspass', 'crosspass')->name('crosspass');
 Route::get('settings', [AuthController::class, 'settings'])->name('settings');
 Route::post('/controlar', 'App\Http\Controllers\ControlarFlujo@control')->name('control'); 
+Route :: get('/add-product',[ProductController :: class,'addProducts']);
+Route :: get('/search',[ProductController :: class,'search']);
+Route :: get('/autocomplete',[ProductController :: class,'autocomplete'])->name('autocomplete');
+
