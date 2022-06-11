@@ -40,4 +40,7 @@ Route::post('/controlar', 'App\Http\Controllers\ControlarFlujo@control')->name('
 Route :: get('/add-product',[ProductController :: class,'addProducts']);
 Route :: get('/search',[ProductController :: class,'search']);
 Route :: get('/autocomplete',[ProductController :: class,'autocomplete'])->name('autocomplete');
-
+Route :: get('/autocompletes',[ProductController :: class,'autocompletes'])->name('autocompletes');
+Route::view('/prueba', 'prueba')->name('prueba');
+Route::post('/entrada', 'App\Http\Controllers\EntradaController@entradareg')->name('entrada');
+Route::post('/salida', 'App\Http\Controllers\SalidaController@salidareg')->name('salida');

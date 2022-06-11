@@ -7,11 +7,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
  
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
     @import url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
+    
 
     body {
       margin: 0;
@@ -121,7 +124,9 @@
       -webkit-animation-name: animatebottom;
       -webkit-animation-duration: 1s;
       animation-name: animatebottom;
-      animation-duration: 1s
+      animation-duration: 1s;
+      
+
     }
 
     @-webkit-keyframes animatebottom {
@@ -187,7 +192,9 @@
 
   <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
     <div class="container">
-      
+      <a href="{{ route('dashboard') }}">
+        <img src="{{asset('assets/images/lapua.png')}}" class="imagen" width="160" height="160" alt="">
+      </a>
       </img>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -196,9 +203,6 @@
     </div>
   </nav>
   <div style="display:none;" id="myDivmain" class="animate-bottom">
-  <a href="{{ route('dashboard') }}">
-        <img src="{{asset('assets/images/lapua.png')}}" class="imagen" width="160" height="160" alt="">
-      </a>
     <main class="login-form mains">
       <div class="container">
         <div class="row justify-content-center">
@@ -307,17 +311,43 @@
                         </div>
                         <div class="car-body" style="padding-top: 30px;padding-bottom:40px;padding-left:20px;padding-right:20px;">
                                                                      
-                             <form>
-                                  <div class="form-group">
-                                       <input type="text"class="form-control typeahead"placeholder="Search ..."/>
-                                  </div>
-                             </form>
+
+                                  <form action="{{route('entrada')}}" method="POST">
+                                  @csrf
+                                  <input class="form-control typeahead" type="text" id="alumnos" name="alumnos"> 
+                                  <button>Entrada</button>
+                                  
+                                  <select name="banos" id="banos">
+
+                                    <option>Baño 1(Chicos) </option>
+                                    <option>Baño 2(Chicos)</option>
+                                    <option>Baño 1(Chicas)</option>
+                                    <option>Baño 2(Chicas)</option>
+
+                                  </select>
+                                  </form>
+                                      
+                                  <form action="{{route('salida')}}" method="POST">
+                                  @csrf
+                                  <input class="form-control typeahea" type="text" id="alumnos2" name="alumnos2">  
+                                  <button>Salida</button>
+                                  <select name="banos1" id="banos1">
+
+                                    <option>Baño 1(Chicos) </option>
+                                    <option>Baño 2(Chicos)</option>
+                                    <option>Baño 1(Chicas)</option>
+                                    <option>Baño 2(Chicas)</option>
+
+                                  </select>
+                                  </form>
+                                  
+
                              </div>
                             </div>
                         </div>
                    </div> 
             </div>
-</section>              
+        </section>              
               </div>
               
               </div>
@@ -349,13 +379,21 @@
           }); 
 
         }
-  });                
+  });      
+                  
           
 </script> 
 
 <script>
   var myVar;
+  $('input.typeahea').typeahead({
+      source:function(terms,process){
+        return $.get("{{route('autocompletes')}}",{terms:terms},function(data){
+               return process(data);
+          }); 
 
+        }
+  }); 
   function myFunction() {
     myVar = setTimeout(showPage, 250);
   }

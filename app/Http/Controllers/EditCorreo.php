@@ -16,9 +16,10 @@ class EditCorreo extends Controller
 
         if(!empty($emails)){
             
-            return redirect('tick');
+            
             $id=$request->user()->id;
             DB::table('users')->where(['id' => $id])->update(['email' => $emails]);
+            return redirect('tick');
     
         }else{
             

@@ -2,6 +2,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Product1;
+
 class ProductController extends Controller
 {
     public function addProducts()
@@ -24,6 +26,14 @@ class ProductController extends Controller
         public function autocomplete(Request$request)
             {
                 $datas=Product :: select("name")
+    
+                     ->where("name","LIKE","%{$request->terms}%")
+                     ->get();
+                return response()->json($datas);
+        }
+        public function autocompletes(Request$request)
+            {
+                $datas=Product1 :: select("name")
     
                      ->where("name","LIKE","%{$request->terms}%")
                      ->get();
