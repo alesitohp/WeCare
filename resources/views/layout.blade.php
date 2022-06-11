@@ -8,13 +8,13 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <style type="text/css">
     @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
     @import url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2);
-    
+
 
     body {
       margin: 0;
@@ -125,7 +125,7 @@
       -webkit-animation-duration: 1s;
       animation-name: animatebottom;
       animation-duration: 1s;
-      
+
 
     }
 
@@ -154,8 +154,8 @@
     }
 
     .row {
-      margin-left:auto;
-      margin-right:auto;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     #myDivmain {
@@ -214,15 +214,15 @@
 
                   <div style="margin-right: 2em;margin-left: 2em;">
                     <p>CHICOS 1</p>
-                    <svg width="1em" height="0em">
+                    <svg id="sema1" width="1em" height="0em">
                       <p></p>
-                      <img src="{{asset('assets/images/rojo1.png')}}" class="blink" width="100em" height="100em" alt="">
-                      <p></p>
-                      <p></p>
-                      <img src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
+                      <img id="img1" src="{{asset('assets/images/rojo1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
                       <p></p>
-                      <img src="{{asset('assets/images/verde1.png')}}" class="" width="100em" height="100em" alt="">
+                      <img id="img2" src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
+                      <p></p>
+                      <p></p>
+                      <img id="img3" src="{{asset('assets/images/verde1.png')}}" class="blink" width="100em" height="100em" alt="">
                       <p></p>
 
                     </svg>
@@ -231,15 +231,15 @@
 
                   <div style="margin-right: 2em;margin-left: 2em;">
                     <p>CHICOS 2</p>
-                    <svg width="1em" height="0em">
+                    <svg id="sema2" width="1em" height="0em">
                       <p></p>
-                      <img src="{{asset('assets/images/rojo1.png')}}" class="blink" width="100em" height="100em" alt="">
-                      <p></p>
-                      <p></p>
-                      <img src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
+                      <img id="img4" src="{{asset('assets/images/rojo1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
                       <p></p>
-                      <img src="{{asset('assets/images/verde1.png')}}" class="" width="100em" height="100em" alt="">
+                      <img id="img5" src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
+                      <p></p>
+                      <p></p>
+                      <img id="img6" src="{{asset('assets/images/verde1.png')}}" class="blink" width="100em" height="100em" alt="">
                       <p></p>
 
                     </svg>
@@ -248,15 +248,15 @@
 
                   <div style="margin-right: 2em;margin-left: 2em;">
                     <p>CHICAS 1</p>
-                    <svg width="1em" height="0em">
+                    <svg id="sema3" width="1em" height="0em">
                       <p></p>
-                      <img src="{{asset('assets/images/rojo1.png')}}" class="blink" width="100em" height="100em" alt="">
-                      <p></p>
-                      <p></p>
-                      <img src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
+                      <img id="img7" src="{{asset('assets/images/rojo1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
                       <p></p>
-                      <img src="{{asset('assets/images/verde1.png')}}" class="" width="100em" height="100em" alt="">
+                      <img id="img8" src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
+                      <p></p>
+                      <p></p>
+                      <img id="img9" src="{{asset('assets/images/verde1.png')}}" class="blink" width="100em" height="100em" alt="">
                       <p></p>
 
                     </svg>
@@ -265,15 +265,15 @@
 
                   <div style="margin-right: 2em;margin-left: 2em;">
                     <p>CHICAS 2</p>
-                    <svg width="1em" height="0em">
+                    <svg id="sema4" width="1em" height="0em">
                       <p></p>
-                      <img src="{{asset('assets/images/rojo1.png')}}" class="blink" width="100em" height="100em" alt="">
-                      <p></p>
-                      <p></p>
-                      <img src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
+                      <img id="img10" src="{{asset('assets/images/rojo1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
                       <p></p>
-                      <img src="{{asset('assets/images/verde1.png')}}" class="" width="100em" height="100em" alt="">
+                      <img id="img11" src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
+                      <p></p>
+                      <p></p>
+                      <img id="img12" src="{{asset('assets/images/verde1.png')}}" class="blink" width="100em" height="100em" alt="">
                       <p></p>
 
                     </svg>
@@ -300,68 +300,68 @@
           <div class="card-body">
             <div class="d-flex justify-content align-items-center">
               <div class="row">
-              <h1>Buscar alumno</h1>
-              <section style="padding-top:20px">
-    <div class="container">
-         <div class="row">
-              <div class="col-md-6offset-md-3">
-                   <div class="card">
-                        <div class="card-header">
-                            
+                <h1>Buscar alumno</h1>
+                <section>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-6offset-md-3">
+                        <div class="card">
+                          <div class="card-header">
+
+                          </div>
+                          <div class="car-body" style="padding-top: 30px;padding-bottom:40px;padding-left:20px;padding-right:20px;">
+
+
+                            <form action="{{route('entrada')}}" method="POST" autocomplete="off">
+                              @csrf
+                              <input class="form-control typeahead" type="text" id="alumnos" name="alumnos" style="margin-bottom:10px">
+                              <button id="entrada">Entrada</button>
+
+                              <select name="banos" id="banos">
+
+                                <option>Baño 1(Chicos)</option>
+                                <option>Baño 2(Chicos)</option>
+                                <option>Baño 1(Chicas)</option>
+                                <option>Baño 2(Chicas)</option>
+
+                              </select>
+                            </form>
+
+                            <form action="{{route('salida')}}" method="POST" autocomplete="off">
+                              @csrf
+                              <input class="form-control typeahea" type="text" id="alumnos2" name="alumnos2" style="margin-bottom:10px">
+                              <button>Salida</button>
+                              <select name="banos1" id="banos1">
+
+                                <option>Baño 1(Chicos)</option>
+                                <option>Baño 2(Chicos)</option>
+                                <option>Baño 1(Chicas)</option>
+                                <option>Baño 2(Chicas)</option>
+
+                              </select>
+                            </form>
+
+
+                          </div>
                         </div>
-                        <div class="car-body" style="padding-top: 30px;padding-bottom:40px;padding-left:20px;padding-right:20px;">
-                                                                     
-
-                                  <form action="{{route('entrada')}}" method="POST">
-                                  @csrf
-                                  <input class="form-control typeahead" type="text" id="alumnos" name="alumnos"> 
-                                  <button>Entrada</button>
-                                  
-                                  <select name="banos" id="banos">
-
-                                    <option>Baño 1(Chicos) </option>
-                                    <option>Baño 2(Chicos)</option>
-                                    <option>Baño 1(Chicas)</option>
-                                    <option>Baño 2(Chicas)</option>
-
-                                  </select>
-                                  </form>
-                                      
-                                  <form action="{{route('salida')}}" method="POST">
-                                  @csrf
-                                  <input class="form-control typeahea" type="text" id="alumnos2" name="alumnos2">  
-                                  <button>Salida</button>
-                                  <select name="banos1" id="banos1">
-
-                                    <option>Baño 1(Chicos) </option>
-                                    <option>Baño 2(Chicos)</option>
-                                    <option>Baño 1(Chicas)</option>
-                                    <option>Baño 2(Chicas)</option>
-
-                                  </select>
-                                  </form>
-                                  
-
-                             </div>
-                            </div>
-                        </div>
-                   </div> 
-            </div>
-        </section>              
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>
-              
-              </div>
+
             </div>
-            
           </div>
-          
+
         </div>
-        
+
       </div>
-      
+
     </div>
-    
-    @yield('content')
+
+  </div>
+
+  @yield('content')
 
 </body>
 
@@ -371,32 +371,77 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js" integrity="sha512-HWlJyU4ut5HkEj0QsK/IxBCY55n5ZpskyjVlAoV9Z7XQwwkqXoYdCIC93/htL3Gu5H3R4an/S0h2NXfbZk3g7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
- var path="{{route('autocomplete')}}";
+  var path = "{{route('autocomplete')}}";
   $('input.typeahead').typeahead({
-      source:function(terms,process){
-        return $.get(path,{terms:terms},function(data){
-               return process(data);
-          }); 
+    source: function(terms, process) {
+      return $.get(path, {
+        terms: terms
+      }, function(data) {
+        return process(data);
+      });
 
-        }
-  });      
-                  
-          
-</script> 
+    }
+  });
+</script>
 
 <script>
   var myVar;
-  $('input.typeahea').typeahead({
-      source:function(terms,process){
-        return $.get("{{route('autocompletes')}}",{terms:terms},function(data){
-               return process(data);
-          }); 
+  var banio;
 
-        }
-  }); 
+  $('input.typeahea').typeahead({
+    source: function(terms, process) {
+      return $.get("{{route('autocompletes')}}", {
+        terms: terms
+      }, function(data) {
+        return process(data);
+      });
+
+    }
+  });
+
   function myFunction() {
     myVar = setTimeout(showPage, 250);
   }
+
+  function cambiarblink1() {
+    document.getElementById('img3').classList.remove("blink");
+    document.getElementById('img1').classList.add("blink");
+  }
+
+  function cambiarblink2() {
+    document.getElementById('img6').classList.remove("blink");
+    document.getElementById('img4').classList.add("blink");
+  }
+
+  function cambiarblink3() {
+    document.getElementById('img9').classList.remove("blink");
+    document.getElementById('img7').classList.add("blink");
+  }
+
+  function cambiarblink4() {
+    document.getElementById('img12').classList.remove("blink");
+    document.getElementById('img10').classList.add("blink");
+  }
+
+
+
+  document.getElementById("entrada").onclick = function() {
+    banio = document.getElementById("banos").value;
+    if (banio == "Baño 1(Chicos)") {
+      cambiarblink1();
+    }
+    if (banio == "Baño 2(Chicos)") {
+      cambiarblink2();
+    }
+    if (banio == "Baño 1(Chicas)") {
+      cambiarblink3();
+    }
+    if (banio == "Baño 2(Chicas)") {
+      cambiarblink4();
+    }
+  };
+
+
 
   function showPage() {
     document.getElementById("loader").style.display = "none";
@@ -443,6 +488,4 @@
 
 
   }
-
-  
 </script>
