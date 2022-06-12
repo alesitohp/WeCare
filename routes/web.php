@@ -19,7 +19,7 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [AuthController::class, 'index'])->name('login');
+
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post'); 
 Route::get('registration', [AuthController::class, 'registration'])->name('register');
@@ -43,4 +43,3 @@ Route :: get('/autocompletes',[ProductController :: class,'autocompletes'])->nam
 Route::view('/prueba', 'prueba')->name('prueba');
 Route::post('/entrada', 'App\Http\Controllers\EntradaController@entradareg')->name('entrada');
 Route::post('/salida', 'App\Http\Controllers\SalidaController@salidareg')->name('salida');
-Route::get('registro', [AuthController::class, 'registro'])->name('registro');
