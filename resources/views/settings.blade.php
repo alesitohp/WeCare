@@ -59,7 +59,7 @@
                     <button id="enviarc">Enviar</button>
                     </form>
 
-                    <a href="{{route('dashboard')}}" class="btn btn-default">Atras</a> 
+                    <a href="{{route('dashboard')}}" id="atras" class="btn btn-default">Atras</a> 
                     
                     
                   </div>
@@ -85,6 +85,7 @@
     document.getElementById("contra").innerHTML = "Cambiar contraseña";
     document.getElementById("enviar").innecrHTML = "Enviar";
     document.getElementById("enviar").innerHTML = "Enviar";
+    document.getElementById("atras").innerHTML = "Atras";
     
 
     }
@@ -100,6 +101,7 @@ if (localStorage.lang === 'eng') {
     document.getElementById("contra").innerHTML = "Change password";
     document.getElementById("enviar").innerHTML = "Send";
     document.getElementById("enviarc").innerHTML = "Send";
+    document.getElementById("atras").innerHTML = "Back";
     
 
     }
@@ -117,6 +119,7 @@ if (localStorage.lang === 'eng') {
     document.getElementById("contra").innerHTML = " Passwort ändern";
     document.getElementById("enviar").innerHTML = "Senden";
     document.getElementById("enviarc").innerHTML = "Senden";
+    document.getElementById("atras").innerHTML = "Hinter";
 
     
     } 
