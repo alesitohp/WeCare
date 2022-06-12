@@ -118,6 +118,7 @@
     .blink {
       animation: blinker 2s linear infinite;
     }
+    
 
 
     .animate-bottom {
@@ -268,7 +269,7 @@
                       <img id="img2" src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
                       <p></p>
-                      <img id="img3" src="{{asset('assets/images/verde1.png')}}" class="blink" width="100em" height="100em" alt="">
+                      <img id="img3" src="{{asset('assets/images/verde1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
 
                     </svg>
@@ -291,7 +292,7 @@
                       <img id="img5" src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
                       <p></p>
-                      <img id="img6" src="{{asset('assets/images/verde1.png')}}" class="blink" width="100em" height="100em" alt="">
+                      <img id="img6" src="{{asset('assets/images/verde1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
 
                     </svg>
@@ -314,7 +315,7 @@
                       <img id="img8" src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
                       <p></p>
-                      <img id="img9" src="{{asset('assets/images/verde1.png')}}" class="blink" width="100em" height="100em" alt="">
+                      <img id="img9" src="{{asset('assets/images/verde1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
 
                     </svg>
@@ -337,7 +338,7 @@
                       <img id="img11" src="{{asset('assets/images/naranja1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
                       <p></p>
-                      <img id="img12" src="{{asset('assets/images/verde1.png')}}" class="blink" width="100em" height="100em" alt="">
+                      <img id="img12" src="{{asset('assets/images/verde1.png')}}" class="" width="100em" height="100em" alt="">
                       <p></p>
 
                     </svg>
@@ -387,7 +388,7 @@
                               <input class="form-control typeahead" type="text" id="alumnos" name="alumnos" style="margin-bottom:10px" onInput="validarInput()">
                               <button disabled id="entrada">Entrada</button>
 
-                              <select name="banos" id="banos">
+                              <select name="banos" id="banos" >
 
                                 <option>Baño 1(Chicos)</option>
                                 <option>Baño 2(Chicos)</option>
@@ -399,8 +400,13 @@
 
                             <form id="listasalida" action="{{route('salida')}}" method="POST" autocomplete="off">
                               @csrf
+<<<<<<< HEAD
                               <input class="form-control typeahea" type="text" id="alumnos2" name="alumnos2" style="margin-bottom:10px" onInput="validarInput2()">
                               <button disabled id="salida">Salida</button>
+=======
+                              <input class="form-control typeahea" type="text" id="alumnos2" name="alumnos2" style="margin-bottom:10px">
+                              <button id="salida">Salida</button>
+>>>>>>> origin/main
                               <select name="banos1" id="banos1">
 
                                 <option>Baño 1(Chicos)</option>
@@ -483,7 +489,10 @@
   }
 
   if (localStorage.puas1 === '1') {
+<<<<<<< HEAD
     document.getElementById('img2').classList.remove("blink");
+=======
+>>>>>>> origin/main
     document.getElementById('img3').classList.remove("blink");
     document.getElementById('img1').classList.add("blink");
   }
@@ -521,6 +530,7 @@
     document.getElementById('img12').classList.add("blink");
     document.getElementById('img10').classList.remove("blink");
   }
+<<<<<<< HEAD
   if (localStorage.puas1 === '9') {
     document.getElementById('img2').classList.add("blink");
     document.getElementById('img3').classList.remove("blink");
@@ -540,6 +550,8 @@
     document.getElementById('img11').classList.add("blink");
     document.getElementById('img10').classList.remove("blink");
   }
+=======
+>>>>>>> origin/main
 
 
 
@@ -548,7 +560,11 @@
     if (banio == "Baño 1(Chicos)") {
       localStorage.setItem('puas1', '1');
       location.reload();
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/main
     }
     if (banio == "Baño 2(Chicos)") {
       localStorage.setItem('puas2', '2');
@@ -561,6 +577,29 @@
     if (banio == "Baño 2(Chicas)") {
       localStorage.setItem('puas4', '4');
       location.reload();
+<<<<<<< HEAD
+=======
+    }
+  };
+
+  document.getElementById("salida").onclick = function() {
+    banios = document.getElementById("banos1").value;
+    if (banios == "Baño 1(Chicos)") {
+      localStorage.setItem('puas1', '5');
+      location.reload();  
+    }
+    if (banios == "Baño 2(Chicos)") {
+      localStorage.setItem('puas2', '6');
+      location.reload();
+    }
+    if (banios == "Baño 1(Chicas)") {
+      localStorage.setItem('puas3', '7');
+      location.reload();
+    }
+    if (banios == "Baño 2(Chicas)") {
+      localStorage.setItem('puas4', '8');
+      location.reload();
+>>>>>>> origin/main
     }
   };
 
@@ -614,8 +653,13 @@
   }
 
   if (localStorage.lang === 'eng') {
+<<<<<<< HEAD
     /*     localStorage.setItem("idioma", "Language");         
         document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
+=======
+/*     localStorage.setItem("idioma", "Language");         
+    document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
+>>>>>>> origin/main
 
     document.getElementById("chicos1").innerHTML = "BOYS 1";
 
@@ -631,10 +675,17 @@
 
     document.getElementById("salida").innerHTML = "Exit";
 
+<<<<<<< HEAD
   }
   if (localStorage.lang === 'ale') {
     /*     localStorage.setItem("idioma", "Language");         
         document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
+=======
+    }
+    if (localStorage.lang === 'ale') {
+/*     localStorage.setItem("idioma", "Language");         
+    document.getElementById("cambiaridioma").innerHTML = localStorage.getItem("idioma"); */
+>>>>>>> origin/main
 
     document.getElementById("chicos1").innerHTML = "JUNGS 1";
 
@@ -650,7 +701,11 @@
 
     document.getElementById("salida").innerHTML = "Ausfahrt";
 
+<<<<<<< HEAD
   }
+=======
+    }
+>>>>>>> origin/main
 
 
   if (localStorage.a === '1') {
