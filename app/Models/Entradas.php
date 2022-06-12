@@ -9,7 +9,7 @@ class Entradas extends Model
 {
     use HasFactory;
 
-    protected $table='registro';
+    protected $table='entrada';
     protected $fillable=[
         'id',
         'name',

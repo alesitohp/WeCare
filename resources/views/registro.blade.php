@@ -16,6 +16,9 @@
             margin-top: 100px;
             display: none;
         }
+        th, td {
+  padding: 15px;
+}   
    
 </style>
 <main class="login-form">
@@ -24,43 +27,50 @@
           <div class="col-md-8">
           <div style="display:none;" id="myDivlogin" class="animate-bottom">
               <div class="card">
-                  <div class="card-header" id="ajustes">Ajustes</div>
+                  <div class="card-header" id="ajustes">Registro</div>
                   <div class="card-body">
-                      <p id="cambiaridioma">Idioma</p>
-                      <div class="btn-group">
-                        <button id="cambiares" onclick="español()">Esp</button>
-                        <button id="cambiareng" onclick="ingles()">Eng</button>
-                        <button id="cambiarale" onclick="aleman()">Ale</button>
-                    </div>
+                    <h1 >Entrada&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salida</h1>
+                    <div style="float: left;">
+                      <table border="1" style="display: inline-block;margin-right: 200px;">
+                        <tr>
+                            <td>Id</td>
+                            <td>Nombre</td>
+                            <td>Baño</td>
+                            <td>Fecha</td>
 
-                    <p class="theme" id="tema">Tema</p>
-                    <div class="btn-group">
-                        <button id="oscuro" onclick="cambiarcoloroscuro()">Oscuro</button>
-                        <button id="normal" onclick="cambiarcolornormal()">Predeterminado</button>
-                        <button id="abstracto" onclick="cambiarcolorabstracto()">Abstracto</button>
-                    </div> 
-                    <p class="theme" id="correoc">Cambiar correo electrónico</p>  
-                    
+                        </tr>
+                        @foreach($puados as $member)
+                        <tr>
+                            <td>{{$member['id']}}</td>
+                            <td>{{$member['name']}}</td>
+                            <td>{{$member['bano']}}</td>
+                            <td>{{$member['created_at']}}</td>
 
-                    <form action="{{route('correo')}}" method="POST">
-                    @csrf
-                    <input type="text" name="correo" id="correo"> 
-                    <button id="enviar">Enviar</button>
+                        </tr>
+                        @endforeach
+                      </table>
+                      </div>
+                      <div style="float: right;">
+                      <table border="1" style="display: inline-block">
+                        <tr>
+                            <td>Id</td>
+                            <td>Nombre</td>
+                            <td>Baño</td>
+                            <td>Fecha</td>
 
-                    
+                        </tr>
+                        @foreach($puadas as $member)
+                        <tr>
+                            <td>{{$member['id']}}</td>
+                            <td>{{$member['name']}}</td>
+                            <td>{{$member['bano']}}</td>
+                            <td>{{$member['created_at']}}</td>
 
-                    <img src="{{asset('assets/images/tick.png')}}" class="des" id="tickcross" width="50" height="50" alt="">
-                    </form>
-
-                    <form action="{{route('contra')}}" method="POST">
-                    @csrf
-                    <p class="theme" id="contra">Cambiar contraseña</p> 
-                    <input type="text"  name="contra" id="contra"> 
-                    <button id="enviarc">Enviar</button>
-                    </form>
-
-                    <a href="{{route('dashboard')}}" id="atras" class="btn btn-default">Atras</a> 
-                    
+                        </tr>
+                        @endforeach
+                      </table>
+                      </div>
+                      
                     
                   </div>
               </div>

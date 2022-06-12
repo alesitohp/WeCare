@@ -253,6 +253,7 @@ nav a:hover:before{
   <a id="inicio" href="{{ route('dashboard') }}">Inicio</a>
   <a id="ajustes" href="{{ route('settings') }}">Ajustes</a>
   <a id="registrar" href="{{ route('register') }}">Invitar</a>
+  <a id="registrar" href="{{ route('registro') }}">Registro</a>
   <a id="cerrar" href="{{ route('logout') }}">Cerrar sesión</a>
 </nav>
 
@@ -316,6 +317,10 @@ nav a:hover:before{
     document.getElementById("registrar").innerHTML = "Invite";
         
     document.getElementById("cerrar").innerHTML = "Sign out";
+
+   
+
+
     }
     if (localStorage.lang === 'ale') {
 /*     localStorage.setItem("idioma", "Language");         
@@ -330,6 +335,7 @@ nav a:hover:before{
     document.getElementById("registrar").innerHTML = "Einladen";
         
     document.getElementById("cerrar").innerHTML = "Ausloggen";
+
     }
 </script>
 
