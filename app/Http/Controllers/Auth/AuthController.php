@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use App\Mail\Correo;
+use App\Models\Entradas;
+use App\Models\Salida;
 use Illuminate\Support\Facades\Mail;
   
 class AuthController extends Controller
@@ -49,6 +51,13 @@ class AuthController extends Controller
         }
   
         return redirect("login")->withSuccess('Opps! You do not have access');
+    }
+
+    public function registro()
+    {
+        $data= Entradas::all();
+        $datas= Salida::all();
+        return view('registro',['puados'=>$data],['puadas'=>$datas]);
     }
       
     /**
